@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (inserted_money < cost) {
-        std::cout << "You haven't inserted enough money to buy " << menu.at(id).first << std::endl;
+        std::cout << "You haven't inserted enough money. Required amount is " << cost << std::endl;
         return 0;
     }
 
