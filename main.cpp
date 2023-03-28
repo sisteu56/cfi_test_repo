@@ -12,7 +12,9 @@ static const bool FeatureStore = true;
 
 static const bool FeaturePayback = true;
 
-// static const bool FeatureCard;
+static const bool FeatureCard = true; 
+
+bool pay_by_card(int pin);
 
 /*
     * -store zum Aktivieren des Store Features (Getränke-Automat hat nur begrenzte Mengen an Getränken jeder Sorte)
@@ -43,6 +45,16 @@ int main(int argc, char *argv[]) {
     }
     int id = std::stoi(argv[1]);
 
+    if (FeatureCard) {
+        if (argv[2] == std::string("-card")) {
+            int pin = std::stoi(argv[3]);
+            std::cout << "Transaction ";
+            pay_by_card(pin) ? (std::cout << "succesful!") : (std::cout << "failed!");
+            std::cout << std::endl;
+            return 0;
+        }
+    }
+
     double inserted_money = std::stod(argv[2]);
     double cost = menu.at(id).second;
 
@@ -71,4 +83,8 @@ int main(int argc, char *argv[]) {
     std::cout << "Thanks for buying " << menu.at(id).first << std::endl;
 
     return 0;
+}
+
+bool pay_by_card(int pin) {
+    return pin - 9999 <= 0 && pin % 2 == 1;
 }
