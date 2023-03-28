@@ -10,7 +10,7 @@
 
 // static const bool FeatureRefill;
 
-// static const bool FeaturePayback = true;
+static const bool FeaturePayback = true;
 
 // static const bool FeatureCard;
 
@@ -41,6 +41,10 @@ int main(int argc, char *argv[]) {
     if (inserted_money < cost) {
         std::cout << "You haven't inserted enough money to buy " << menu.at(id).first << std::endl;
         return 0;
+    }
+
+    if (FeaturePayback) {
+        std::cout << "You receive " << inserted_money - cost << " as payback" << std::endl;
     }
 
     std::cout << "Thanks for buying " << menu.at(id).first << std::endl;
