@@ -11,7 +11,7 @@ int main() {
   }
 
   if (Foo) {
-    return 42;
+    return 42 + x;
   } else {
     return 1 - x;
   }
