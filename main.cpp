@@ -6,6 +6,8 @@ int main() {
 
   bool FeatureB __attribute__((feature_variable("FeatureB"))) = true;
 
+  int FeatureS __attribute__((feature_variable("FeaturS"))) = 2;
+
   if (FeatureA) {
     x += 22;
   }
@@ -18,5 +20,5 @@ int main() {
     x = 42;
   }
 
-  return x;
+  return x * FeatureS;
 }
