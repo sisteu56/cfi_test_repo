@@ -2,9 +2,9 @@ int main() {
 
   int x = 0;
 
-  bool Foo __attribute__((feature_variable("Foo"))) = true;
+  bool FeatureA __attribute__((feature_variable("FeatureA"))) = true;
 
-  bool Goo __attribute__((feature_variable("Goo"))) = true;
+  bool FeatureB __attribute__((feature_variable("FeatureB"))) = true;
 
   return x;
 }
