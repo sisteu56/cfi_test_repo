@@ -14,5 +14,9 @@ int main() {
     x *= 2;
   }
 
+  if (!FeatureA && FeatureB) {
+    x = 42;
+  }
+
   return x;
 }
