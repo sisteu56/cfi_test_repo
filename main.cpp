@@ -9,7 +9,8 @@ int main() {
   int FeatureS __attribute__((feature_variable("FeaturS"))) = 2;
 
   if (FeatureA) {
-    x += 22;
+    x += 11;
+    x *= 2;
   }
 
   if (!FeatureB) {
