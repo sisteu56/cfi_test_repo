@@ -10,5 +10,9 @@ int main() {
     x += 22;
   }
 
+  if (!FeatureB) {
+    x *= 2;
+  }
+
   return x;
 }
