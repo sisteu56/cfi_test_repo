@@ -6,7 +6,7 @@ int main() {
 
   bool FeatureB __attribute__((feature_variable("FeatureB"))) = true;
 
-  int FeatureS __attribute__((feature_variable("FeaturS"))) = 2;
+  int FeatureS __attribute__((feature_variable("FeatureS"))) = 2;
 
   if (FeatureA) {
     x += 11;
