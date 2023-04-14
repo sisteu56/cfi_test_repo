@@ -1,3 +1,7 @@
+int main() {
+    return calc(720);
+}
+
 int calc(int input) {
 
     bool FeatureExp __attribute__((feature_variable("FeatureExp"))) = true;
