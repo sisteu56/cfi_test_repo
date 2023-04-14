@@ -1,3 +1,5 @@
+int calc(int);
+
 int main() {
     return calc(720);
 }
