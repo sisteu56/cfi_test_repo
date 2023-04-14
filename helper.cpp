@@ -6,5 +6,9 @@ int calc(int input) {
 
     prod = (prod - 500) * 2;
 
+    if (FeatureExp) {
+        prod = prod + 1000;
+    }
+
     return prod;
 }
