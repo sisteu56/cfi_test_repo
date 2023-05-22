@@ -5,4 +5,8 @@ int main(int argc, char** argv) {
     bool __attribute__((feature_variable("FeatureC"))) FeatureC = argv[2] == "--C";
 
     int scale = 5;
+
+    if (FeatureA) {
+        scale *= 2;
+    }
 }
