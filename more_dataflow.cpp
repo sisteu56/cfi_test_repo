@@ -9,4 +9,8 @@ int main(int argc, char** argv) {
     if (FeatureA) {
         scale *= 2;
     }
+
+    if (FeatureB) {
+        scale *= 0.5;
+    }
 }
