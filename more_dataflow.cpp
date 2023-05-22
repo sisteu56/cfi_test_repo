@@ -13,4 +13,10 @@ int main(int argc, char** argv) {
     if (FeatureB) {
         scale *= 0.5;
     }
+
+    if (FeatureC) {
+        return 0;
+    } else {
+        return 1;
+    }
 }
