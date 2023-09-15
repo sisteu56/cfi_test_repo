@@ -6,7 +6,7 @@ int main() {
 
     if (FeatureMin) {
         scale *= 0.5;
-        // do something
+        // doN't do something
     }
 
     return 100 * scale;
